@@ -20,8 +20,12 @@
   },
   "homepage": "https://github.com/klaytn-krew/pygg#readme",
   "dependencies": {
+    "@types/react": "^16.8.24",
+    "@types/styled-components": "^4.1.18",
+    "prettier": "^1.18.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
