@@ -1,10 +1,6 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from "react"
+import ReactDOM from "react-dom";
 
-interface Props {}
+import MainPage from "./pages/MainPage";
 
-const App = ({  }: Props) => {
-  return <h1>Hello PYGG!</h1>;
-};
-
-ReactDOM.render(<App />, document.getElementById('app'));``
+ReactDOM.render(<MainPage />, document.getElementById("app"));
