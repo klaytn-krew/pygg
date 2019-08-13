@@ -18,7 +18,7 @@ interface ITableBodyCellProps extends IComponentProps {
 }
 
 const SemanticStyledTableBodyCell =  ({ className, ...props }: ITableBodyCellProps) => (
-  <td>
+  <td className={className} {...props}>
     {props.children}
   </td>
 );

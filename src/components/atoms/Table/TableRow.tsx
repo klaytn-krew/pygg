@@ -6,7 +6,7 @@ import { IComponentProps } from "../../../constants/types";
 interface ITableRowProps extends IComponentProps {}
 
 const SemanticStyledTableRow =  ({ className, ...props }: ITableRowProps) => (
-  <tr>
+  <tr className={className} {...props}>
     {props.children}
   </tr>
 );
