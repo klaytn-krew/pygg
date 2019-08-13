@@ -20,7 +20,7 @@ interface ITableProps extends IComponentProps {
 }
 
 const SemanticStyledTable =  ({ className, ...props }: ITableProps) => (
-  <table>
+  <table className={className} {...props}>
     {props.children}
   </table>
 );
