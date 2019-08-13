@@ -3,4 +3,8 @@ import ReactDOM from "react-dom";
 
 import MainPage from "./pages/MainPage";
 
-ReactDOM.render(<MainPage />, document.getElementById("app"));
+const App = () => {
+  return <MainPage />;
+};
+
+ReactDOM.render(<App />, document.getElementById("app"));
