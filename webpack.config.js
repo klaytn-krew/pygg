@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: {
     'js/app': ['./src/App.tsx'],
   },

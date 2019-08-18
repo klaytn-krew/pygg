@@ -6,5 +6,10 @@
     ],
     "@babel/react",
     "@babel/typescript"
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["babel-plugin-styled-components"]
+    }
+  }
 }
