@@ -17,13 +17,13 @@ interface ITableBodyCellProps extends IComponentProps {
   _border?: IBorderType;
 }
 
-const SemanticStyledTableBodyCell =  ({ className, ...props }: ITableBodyCellProps) => (
+const CustomStyledTableBodyCell =  ({ className, ...props }: ITableBodyCellProps) => (
   <td className={className} {...props}>
     {props.children}
   </td>
 );
 
-const StyledTableBodyCell = styled(SemanticStyledTableBodyCell)`
+const StyledTableBodyCell = styled(CustomStyledTableBodyCell)`
   ${props => props._inner && innerStyling(props._inner)}
   ${props => props._outer && outerStyling(props._outer)}
   ${props => props._border && borderStyling(props._border)}

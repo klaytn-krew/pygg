@@ -24,13 +24,13 @@ interface IGridProps {
   _background_color?: string;
 }
 
-const SemanticStyledGrid =  ({ className, ...props }: IGridProps) => (
+const CustomStyledGrid =  ({ className, ...props }: IGridProps) => (
   <div className={className} {...props}>
     {props.children}
   </div>
 );
 
-const StyledGrid = styled(SemanticStyledGrid)`
+const StyledGrid = styled(CustomStyledGrid)`
   ${props => props._inner && innerStyling(props._inner)}
   ${props => props._outer && outerStyling(props._outer)}
   ${props => props._border && borderStyling(props._border)}

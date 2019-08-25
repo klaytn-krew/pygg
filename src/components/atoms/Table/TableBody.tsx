@@ -5,13 +5,13 @@ import { IComponentProps } from "../../../constants/types";
 
 interface ITableBodyProps extends IComponentProps {}
 
-const SemanticStyledTableBody =  ({ className, ...props }: ITableBodyProps) => (
+const CustomStyledTableBody =  ({ className, ...props }: ITableBodyProps) => (
   <tbody className={className} {...props}>
     {props.children}
   </tbody>
 );
 
-const StyledTableBody = styled(SemanticStyledTableBody)``;
+const StyledTableBody = styled(CustomStyledTableBody)``;
 
 export const TableBody = (props: ITableBodyProps) => {
   return (

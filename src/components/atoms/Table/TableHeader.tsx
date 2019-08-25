@@ -5,13 +5,13 @@ import { IComponentProps } from "../../../constants/types";
 
 interface ITableHeaderProps extends IComponentProps {}
 
-const SemanticStyledTableHeader =  ({ className, ...props }: ITableHeaderProps) => (
+const CustomStyledTableHeader =  ({ className, ...props }: ITableHeaderProps) => (
   <thead className={className} {...props}>
     {props.children}
   </thead>
 );
 
-const StyledTableHeader = styled(SemanticStyledTableHeader)``;
+const StyledTableHeader = styled(CustomStyledTableHeader)``;
 
 export const TableHeader = (props: ITableHeaderProps) => {
   return (
