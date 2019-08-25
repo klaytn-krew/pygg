@@ -33,7 +33,7 @@ const StyledTable = styled(CustomStyledTable)`
   background-color: ${props => props._background_color} !important;
 `;
 
-export const SemanticTable = (props: ITableProps) => {
+export const Table = (props: ITableProps) => {
   return (
     <StyledTable
       _inner={props._inner}

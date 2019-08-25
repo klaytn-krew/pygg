@@ -35,7 +35,7 @@ const StyledGridRow = styled(CustomStyledGridRow)`
   display: flex;
 `;
 
-export const SemanticGridRow = (props: IGridRowProps) => {
+export const GridRow = (props: IGridRowProps) => {
   return (
     <StyledGridRow
       _inner={props._inner}
@@ -49,4 +49,4 @@ export const SemanticGridRow = (props: IGridRowProps) => {
   );
 };
 
-export type TGridRow = ReturnType<typeof SemanticGridRow>
+export type TGridRow = ReturnType<typeof GridRow>

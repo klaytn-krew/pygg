@@ -37,7 +37,7 @@ const StyledGridColumn = styled(CustomStyledGridColumn)`
   width: ${props => props._width / 16 * 100}%;
 `;
 
-export const SemanticGridColumn = (props: IGridColumnProps) => {
+export const GridColumn = (props: IGridColumnProps) => {
   return (
     <StyledGridColumn
       _inner={props._inner}
@@ -52,4 +52,4 @@ export const SemanticGridColumn = (props: IGridColumnProps) => {
   );
 };
 
-export type TGridColumn = ReturnType<typeof SemanticGridColumn>
+export type TGridColumn = ReturnType<typeof GridColumn>

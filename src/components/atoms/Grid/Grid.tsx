@@ -39,7 +39,7 @@ const StyledGrid = styled(CustomStyledGrid)`
   background-color: ${props => props._background_color} !important;
 `;
 
-export const SemanticGrid = (props: IGridProps) => {
+export const Grid = (props: IGridProps) => {
   return (
     <StyledGrid
       _inner={props._inner}
