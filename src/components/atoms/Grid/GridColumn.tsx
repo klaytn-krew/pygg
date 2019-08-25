@@ -22,7 +22,9 @@ interface IGridColumnProps extends IComponentProps {
 }
 
 const CustomStyledGridColumn =  ({ className, ...props }: IGridColumnProps) => (
-  <div className={className} {...props}>
+  <div 
+    className={className}
+  >
     {props.children}
   </div>
 );

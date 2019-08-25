@@ -20,7 +20,9 @@ interface ITableProps extends IComponentProps {
 }
 
 const CustomStyledTable =  ({ className, ...props }: ITableProps) => (
-  <table className={className} {...props}>
+  <table 
+    className={className}
+  >
     {props.children}
   </table>
 );

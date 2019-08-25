@@ -18,7 +18,9 @@ interface ITableBodyCellProps extends IComponentProps {
 }
 
 const CustomStyledTableBodyCell =  ({ className, ...props }: ITableBodyCellProps) => (
-  <td className={className} {...props}>
+  <td 
+    className={className}
+  >
     {props.children}
   </td>
 );

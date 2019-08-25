@@ -25,7 +25,9 @@ interface IGridProps {
 }
 
 const CustomStyledGrid =  ({ className, ...props }: IGridProps) => (
-  <div className={className} {...props}>
+  <div 
+    className={className}
+  >
     {props.children}
   </div>
 );

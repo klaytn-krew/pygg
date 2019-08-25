@@ -6,7 +6,9 @@ import { IComponentProps } from "../../../constants/types";
 interface ITableBodyProps extends IComponentProps {}
 
 const CustomStyledTableBody =  ({ className, ...props }: ITableBodyProps) => (
-  <tbody className={className} {...props}>
+  <tbody 
+    className={className}
+  >
     {props.children}
   </tbody>
 );

@@ -21,7 +21,9 @@ interface IGridRowProps extends IComponentProps {
 }
 
 const CustomStyledGridRow =  ({ className, ...props }: IGridRowProps) => (
-  <div className={className} {...props}>
+  <div 
+    className={className}
+  >
     {props.children}
   </div>
 );
@@ -31,6 +33,7 @@ const StyledGridRow = styled(CustomStyledGridRow)`
   ${props => props._outer && outerStyling(props._outer)}
   ${props => props._border && borderStyling(props._border)}
   ${props => props._contentAlign && contentAlignStyling(props._contentAlign)}
+  
   background-color: ${props => props._background_color} !important;
   display: flex;
 `;
