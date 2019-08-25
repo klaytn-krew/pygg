@@ -4,41 +4,49 @@ import styled from "styled-components";
 import { IComponentProps } from "../../../constants/types";
 import {
   IInnerType,
-  IBorderType,
   IOuterType,
+  IBorderType,
   innerStyling,
-  borderStyling,
-  outerStyling
+  outerStyling,
+  borderStyling
 } from "../../../constants/styles";
 
-interface ITableBodyCellProps extends IComponentProps {
+interface IInputProps extends IComponentProps {
   _inner?: IInnerType;
   _outer?: IOuterType;
   _border?: IBorderType;
+
+  placeholder?: string;
+  _background_color?: string;
 }
 
-const CustomStyledTableBodyCell =  ({ className, ...props }: ITableBodyCellProps) => (
-  <td 
+const CustomStyledInput =  ({ className, ...props }: IInputProps) => (
+  <input 
     className={className}
+    placeholder={props.placeholder}
   >
     {props.children}
-  </td>
+  </input>
 );
 
-const StyledTableBodyCell = styled(CustomStyledTableBodyCell)`
+const StyledInput = styled(CustomStyledInput)`
   ${props => props._inner && innerStyling(props._inner)}
   ${props => props._outer && outerStyling(props._outer)}
   ${props => props._border && borderStyling(props._border)}
+
+  background-color: ${props => props._background_color} !important;
 `;
 
-export const TableBodyCell = (props: ITableBodyCellProps) => {
+export const Input = (props: IInputProps) => {
   return (
-    <StyledTableBodyCell
+    <StyledInput
       _inner={props._inner}
       _outer={props._outer}
       _border={props._border}
+      placeholder={props.placeholder}
+      _background_color={props._background_color}
     >
       {props.children}
-    </StyledTableBodyCell>
+    </StyledInput>
   );
 };

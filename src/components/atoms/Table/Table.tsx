@@ -19,13 +19,15 @@ interface ITableProps extends IComponentProps {
   _background_color?: string;
 }
 
-const SemanticStyledTable =  ({ className, ...props }: ITableProps) => (
-  <table className={className} {...props}>
+const CustomStyledTable =  ({ className, ...props }: ITableProps) => (
+  <table 
+    className={className}
+  >
     {props.children}
   </table>
 );
 
-const StyledTable = styled(SemanticStyledTable)`
+const StyledTable = styled(CustomStyledTable)`
   ${props => props._inner && innerStyling(props._inner)}
   ${props => props._outer && outerStyling(props._outer)}
   ${props => props._border && borderStyling(props._border)}
@@ -33,7 +35,7 @@ const StyledTable = styled(SemanticStyledTable)`
   background-color: ${props => props._background_color} !important;
 `;
 
-export const SemanticTable = (props: ITableProps) => {
+export const Table = (props: ITableProps) => {
   return (
     <StyledTable
       _inner={props._inner}

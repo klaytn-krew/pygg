@@ -21,23 +21,25 @@ interface IGridColumnProps extends IComponentProps {
   _width?: number;
 }
 
-const SemanticStyledGridColumn =  ({ className, ...props }: IGridColumnProps) => (
-  <div className={className} {...props}>
+const CustomStyledGridColumn =  ({ className, ...props }: IGridColumnProps) => (
+  <div 
+    className={className}
+  >
     {props.children}
   </div>
 );
 
-const StyledGridColumn = styled(SemanticStyledGridColumn)`
+const StyledGridColumn = styled(CustomStyledGridColumn)`
   ${props => props._inner && innerStyling(props._inner)}
   ${props => props._outer && outerStyling(props._outer)}
   ${props => props._border && borderStyling(props._border)}
   ${props => props._contentAlign && contentAlignStyling(props._contentAlign)}
 
   background-color: ${props => props._background_color} !important;
-  width: ${props => props._width/16*100}%;
+  width: ${props => props._width / 16 * 100}%;
 `;
 
-export const SemanticGridColumn = (props: IGridColumnProps) => {
+export const GridColumn = (props: IGridColumnProps) => {
   return (
     <StyledGridColumn
       _inner={props._inner}
@@ -52,4 +54,4 @@ export const SemanticGridColumn = (props: IGridColumnProps) => {
   );
 };
 
-export type TGridColumn = ReturnType<typeof SemanticGridColumn>
+export type TGridColumn = ReturnType<typeof GridColumn>

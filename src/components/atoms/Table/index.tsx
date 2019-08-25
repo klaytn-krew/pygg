@@ -3,10 +3,10 @@ import { TableBodyCell } from "./TableBodyCell";
 import { TableHeader } from "./TableHeader";
 import { TableHeaderCell } from "./TableHeaderCell";
 import { TableRow } from "./TableRow";
-import { SemanticTable } from "./Table";
+import { Table } from "./Table";
 
 export {
-  SemanticTable as Table,
+  Table,
   TableBody,
   TableBodyCell,
   TableHeader,

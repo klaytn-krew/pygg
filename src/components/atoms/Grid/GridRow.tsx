@@ -20,22 +20,25 @@ interface IGridRowProps extends IComponentProps {
   _background_color?: string;
 }
 
-const SemanticStyledGridRow =  ({ className, ...props }: IGridRowProps) => (
-  <div className={className} {...props}>
+const CustomStyledGridRow =  ({ className, ...props }: IGridRowProps) => (
+  <div 
+    className={className}
+  >
     {props.children}
   </div>
 );
 
-const StyledGridRow = styled(SemanticStyledGridRow)`
+const StyledGridRow = styled(CustomStyledGridRow)`
   ${props => props._inner && innerStyling(props._inner)}
   ${props => props._outer && outerStyling(props._outer)}
   ${props => props._border && borderStyling(props._border)}
   ${props => props._contentAlign && contentAlignStyling(props._contentAlign)}
+  
   background-color: ${props => props._background_color} !important;
   display: flex;
 `;
 
-export const SemanticGridRow = (props: IGridRowProps) => {
+export const GridRow = (props: IGridRowProps) => {
   return (
     <StyledGridRow
       _inner={props._inner}
@@ -49,4 +52,4 @@ export const SemanticGridRow = (props: IGridRowProps) => {
   );
 };
 
-export type TGridRow = ReturnType<typeof SemanticGridRow>
+export type TGridRow = ReturnType<typeof GridRow>
